@@ -1,6 +1,7 @@
 package com.amit.basics;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Person {
 
@@ -67,4 +68,8 @@ public class Person {
                 +"]";
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, lastName, dateOfBirth);
+    }
 }

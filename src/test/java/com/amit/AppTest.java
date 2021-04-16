@@ -7,11 +7,12 @@ import com.amit.problems.Factorial;
 import com.amit.problems.FactorialImpl;
 import com.amit.problems.NumberSwaping;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.experimental.categories.Category;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
 
 /**
  * Unit test for the App.
@@ -61,6 +62,16 @@ public class AppTest
         int b = 23;
         assertEquals("2312",new NumberSwaping().swap(a, b));
         assertEquals("2312",new NumberSwaping().swapWithoutTemp(a, b));
+    }
+
+    @Test
+    public void testComparable() {
+        LinkedList<Person> list = new LinkedList<>();
+        Arrays.asList(p2,p3,p2);
+        list.addAll(Arrays.asList(p3,p1,p2));
+        list.forEach(System.out::println);
+        Collections.sort(list);
+        list.forEach(System.out::println);
     }
 
 }

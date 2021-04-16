@@ -3,7 +3,7 @@ package com.amit.basics;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person>{
 
     private String name;
 
@@ -71,5 +71,10 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(name, lastName, dateOfBirth);
+    }
+
+    @Override
+    public int compareTo(Person person) {
+        return this.name.compareTo(person.name);
     }
 }
